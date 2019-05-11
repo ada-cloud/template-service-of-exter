@@ -1,4 +1,4 @@
-const Server = require("cloud-boot");
+const Server = require("ada-cloud-boot");
 const router = require("./src/router");
 
 let server = new Server();

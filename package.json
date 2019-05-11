@@ -7,6 +7,6 @@
   "author": "WangJinliang(hou80houzhu)",
   "license": "MIT",
   "dependencies": {
-    "ada-cloud-boot": "0.0.1"
+    "ada-cloud-boot": "0.0.8"
   }
 }
