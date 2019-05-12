@@ -7,6 +7,7 @@
   "author": "WangJinliang(hou80houzhu)",
   "license": "MIT",
   "dependencies": {
-    "ada-cloud-boot": "0.0.8"
+    "ada-cloud-boot": "0.0.8",
+    "koa-router": "^7.4.0"
   }
 }
