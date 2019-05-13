@@ -2,12 +2,13 @@ const CloudApp = require("ada-cloud-boot");
 
 class Server extends CloudApp {
     getRemoteConfigInfo(service) {
-        let target = this.config.configPath;
         return service.get('/cloud-config-service/get', {
-            path: target
+            path: 'user-db.json'
         }).then(a => {
-            return a;
-        });;
+            return {
+                db: JSON.parse(a).data
+            };
+        });
     }
 }
 
