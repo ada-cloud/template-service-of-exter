@@ -1,4 +1,4 @@
-const Server = require("ada-cloud-boot");
+const Server = require("./src/index");
 const router = require("./src/router");
 const { Boost, Service } = require("ada-cloud-util/sql");
 const Path = require("path");
