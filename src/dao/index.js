@@ -1,5 +1,5 @@
 const mysql = require('mysql2');
-const { Dao } = require("ada-cloud-util/sql");
+const { Dao } = require("ada-cloud-util/boot");
 
 class MySqlDao extends Dao {
     constructor(option) {
