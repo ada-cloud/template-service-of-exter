@@ -9,11 +9,4 @@ server.on('configchange', () => {
 });
 server.on('started', () => {
 });
-server.startup(({ context, config }) => {
-    context.Service = Service;
-    return Boost.boot({
-        source: Path.relative(__dirname, "./src"),
-        database: config.db,
-        koa: server
-    });
-});
+server.startup();

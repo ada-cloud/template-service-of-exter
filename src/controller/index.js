@@ -11,9 +11,7 @@ class TextController extends Controller {
     }
 
     get({ Service }) {
-        return Service.getService("testService").test().then(() => {
-            return this.success('template-service-name');
-        });
+        return Service.getService("testService").test();
     }
 }
 

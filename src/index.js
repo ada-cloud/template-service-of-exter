@@ -10,6 +10,10 @@ class Server extends CloudApp {
             };
         });
     }
+
+    getDatabaseConfigure() {
+        return this.config.db;
+    }
 }
 
 module.exports = Server;
