@@ -1,4 +1,4 @@
-const CloudApp = require("ada-cloud-boot");
+const CloudApp = require("ada-cloud-hub/boot");
 
 class Server extends CloudApp {
     getRemoteConfigInfo(service) {
