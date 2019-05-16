@@ -8,7 +8,6 @@
   "license": "MIT",
   "dependencies": {
     "ada-cloud-hub": "latest",
-    "ada-cloud-util": "latest",
-    "mysql2": "^1.6.5"
+    "ada-cloud-util": "latest"
   }
 }

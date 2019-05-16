@@ -6,7 +6,8 @@ class TextController extends Controller {
             basePath: "",
             actions: {
                 get: { path: "/get", method: 'get' }
-            }
+            },
+            service: 'userService'
         }
     }
 

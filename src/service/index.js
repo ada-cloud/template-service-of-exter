@@ -1,9 +1,10 @@
 const { Service } = require("ada-cloud-util/boost");
+const UserModel = require("../model/user");
 
 class TestService extends Service {
     static configure() {
         return {
-            name: "testService",
+            name: "userService",
             dao: 'mysql',
             methods: {
                 test: { transaction: false }
@@ -12,9 +13,9 @@ class TestService extends Service {
     }
 
     test() {
-        return this.connect.execute('select * from task').then(result => {
-            return result[0].map(a => a.id);
-        });
+        let userModel = new UserModel({ username, password });
+        // throw Error('xxxx');
+        return this.dao.find(userModel);
     }
 }
 
