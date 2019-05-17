@@ -5,7 +5,7 @@ class TestService extends Service {
     static configure() {
         return {
             name: "userService",
-            dao: 'mysql',
+            dao: 'boost',
             methods: {
                 test: { transaction: false }
             }

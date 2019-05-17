@@ -11,8 +11,8 @@ class TextController extends Controller {
         }
     }
 
-    get({ Service }) {
-        return Service.getService("testService").test();
+    get() {
+        return this.userService.test();
     }
 }
 
