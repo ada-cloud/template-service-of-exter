@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "ada-cloud-hub": "latest",
-    "ada-cloud-util": "latest"
+    "ada-cloud-util": "latest",
+    "koa-bodyparser": "^4.2.1"
   }
 }
