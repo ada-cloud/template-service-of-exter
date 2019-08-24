@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "DEBUG=ADA* node node_modules/ada-cloud-util/build/develop",
+    "g": "node node_modules/ada-cloud-util/bin/cli boost"
+  },
   "author": "WangJinliang(hou80houzhu)",
   "license": "MIT",
   "dependencies": {
