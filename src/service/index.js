@@ -1,22 +1,15 @@
-const { Service } = require("ada-cloud-util/boost");
-const UserModel = require("../model/user");
+import { Service, MysqlDao } from "ada-cloud-util/boost";
+import { dao } from "ada-cloud-util/boost/annotation";
+import UserModel from "../model/user";
 
 class TestService extends Service {
-    static configure() {
-        return {
-            name: "userService",
-            dao: 'boost',
-            methods: {
-                test: { transaction: false }
-            }
-        }
-    }
 
-    test() {
-        let userModel = new UserModel({ username, password });
-        // throw Error('xxxx');
-        return this.dao.find(userModel);
+    @dao(MysqlDao)
+    dao = null;
+
+    getUserList({ entity = {}, query = {} }) {
+        return this.dao.find(new UserModel().set(entity), query);
     }
 }
 
-module.exports = TestService;
+export default TestService;

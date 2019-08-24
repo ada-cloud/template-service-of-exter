@@ -1,14 +1,30 @@
-const { Model, Types } = require("ada-cloud-util/boost");
+import { Model, Types } from "ada-cloud-util/boost";
+import { table, field } from "ada-cloud-util/boost/annotation"
 
-class UserModel extends Model {
-    static configure = {
-        table: 'user',
-        fields: {
-            id: { prime: true, type: Types.STRING },
-            username: { type: Types.STRING },
-            password: { type: Types.STRING }
-        }
-    }
+@table({ name: "user" })
+class UserModel extends Model { 
+    
+    @field({
+        prime: true,
+        name: "id",
+        type: Types.STRING,
+        valid: {required:true,max:32}
+    })
+    id = null;
+    
+    @field({
+        name: "username",
+        type: Types.STRING,
+        valid: {max:50}
+    })
+    username = null;
+    
+    @field({
+        name: "password",
+        type: Types.STRING,
+        valid: {max:30}
+    })
+    password = null;
 }
 
-module.exports = UserModel;
+export default UserModel;
